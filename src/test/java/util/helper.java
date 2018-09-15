@@ -14,13 +14,13 @@ public class helper {
 		
 	}
 	public void pressButtonOnVisible(String xPath,WebDriver driver) {
-		
+		this.waitUntilElementVisible(xPath, driver);
 		System.out.println("Clicking");
 		driver.findElement(By.xpath(xPath)).click();
 		
 	}
 	public void waitUntilElementVisible(String xPath,WebDriver driver) {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 1000);
 		System.out.println("Waiting for element to be visible by XPath"+xPath);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath)));
 	}
