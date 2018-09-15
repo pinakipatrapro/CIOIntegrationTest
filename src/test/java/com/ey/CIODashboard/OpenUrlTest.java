@@ -1,11 +1,8 @@
 package com.ey.CIODashboard;
 import util.helper;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class OpenUrlTest {
@@ -21,8 +18,8 @@ public class OpenUrlTest {
 		
 		hlpr.sendKeysOnVisible("Scp1234@", "//input[@Placeholder=\"Password\"]", driver);
 		hlpr.sendKeysOnVisible("S0018211704", "//input[@Placeholder=\"E-mail, ID, or User Name\"]", driver);
+		hlpr.pressButtonOnVisible("//button[contains(., 'Log On')]", driver);
 		
-		driver.findElement(By.xpath("//button[contains(., 'Log On')]")).click();
 		assert testUrl.equals(driver.getCurrentUrl());
 		
 		if(testUrl.equals(driver.getCurrentUrl())){
