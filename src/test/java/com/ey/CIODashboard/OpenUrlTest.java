@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class OpenUrl {
+public class OpenUrlTest {
 	@Test
 	public void loginToScp() {
 		String testUrl = "https://flpnwc-bb0651249.dispatcher.us1.hana.ondemand.com/sites/CIOAdmin#allocation-maintain"; 
