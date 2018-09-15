@@ -30,7 +30,7 @@ public class OpenUrl {
 			System.out.println("Successfully Logged In");
 		}else {
 			System.out.println("Error Logging In");
-		}
+		} 
 		
 		driver.close();
 		
