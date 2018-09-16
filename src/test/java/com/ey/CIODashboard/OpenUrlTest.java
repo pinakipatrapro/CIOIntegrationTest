@@ -1,6 +1,9 @@
 package com.ey.CIODashboard;
 import util.helper;
 import util.loadWebdriver;
+
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
@@ -34,8 +37,9 @@ public class OpenUrlTest {
 		WebDriver driver = loadDriver.getDriver();
 		driver.get("https://flpnwc-bb0651249.dispatcher.us1.hana.ondemand.com/sites/CIOAdmin#New_App-Display&/GenerateData");
 		hlpr.pressButtonOnVisible("//button[contains(.,'Generate Data')]", driver);
+		//Delay to load the dialog box	
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-//		hlpr.sendKeysOnVisible("Auto Generated - Records - Jenkins", "//*[@id=\"__input25-inner\"]", driver);
 		hlpr.pressButtonOnVisible("//button[.='Generate']", driver);
 		hlpr.pressButtonOnVisible("//button[contains(.,'Ok')]", driver);
 		System.out.println("Successfully generated records");
