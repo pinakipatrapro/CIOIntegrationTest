@@ -7,7 +7,7 @@ public class loadWebdriver {
 	static WebDriver driver;
 	public WebDriver getDriver() {
 		if (driver == null){
-			System.setProperty("webdriver.gecko.driver","/usr/local/bin/geckodriver");
+			System.setProperty("webdriver.gecko.driver","C:\\Driver\\geckodriver.exe");
 			driver = new FirefoxDriver();
 			return driver;
 		}else{
