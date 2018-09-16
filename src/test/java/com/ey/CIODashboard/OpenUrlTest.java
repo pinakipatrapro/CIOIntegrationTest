@@ -38,7 +38,7 @@ public class OpenUrlTest {
 		driver.get("https://flpnwc-bb0651249.dispatcher.us1.hana.ondemand.com/sites/CIOAdmin#New_App-Display&/GenerateData");
 		hlpr.pressButtonOnVisible("//button[contains(.,'Generate Data')]", driver);
 		//Delay to load the dialog box	
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		hlpr.pressButtonOnVisible("//button[.='Generate']", driver);
 		hlpr.pressButtonOnVisible("//button[contains(.,'Ok')]", driver);
